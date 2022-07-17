@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using CalculatorLibrary;
 
 namespace CalculatorAPI.Controllers;
 
@@ -18,7 +19,7 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
+    [HttpGet(Name = "Calulator")]
     public IEnumerable<WeatherForecast> Get()
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
