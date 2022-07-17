@@ -7,10 +7,6 @@ namespace CalculatorAPI.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
 
     private readonly ILogger<WeatherForecastController> _logger;
 
@@ -19,16 +15,35 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet(Name = "Calulator")]
-    public IEnumerable<WeatherForecast> Get()
+    [HttpGet]
+    [Route("/add/{paramOne}/{paramTwo}")]
+    public double Addition(int paramOne, int paramTwo)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateTime.Now.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+        return Calculator.Calculate(paramOne, paramTwo, "+");
+
+    }
+
+    [HttpGet]
+    [Route("/subtract/{paramOne}/{paramTwo}")]
+    public double Subtraction(int paramOne, int paramTwo)
+    {
+        return Calculator.Calculate(paramOne, paramTwo, "-");
+
+    }
+
+    [HttpGet]
+    [Route("/multiply/{paramOne}/{paramTwo}")]
+    public double Multiplication(int paramOne, int paramTwo)
+    {
+        return Calculator.Calculate(paramOne, paramTwo, "*");
+
+    }
+
+    [HttpGet]
+    [Route("/divide/{paramOne}/{paramTwo}")]
+    public double Division(int paramOne, int paramTwo)
+    {
+        return Calculator.Calculate(paramOne, paramTwo, "/");
+
     }
 }
-
