@@ -2,7 +2,7 @@
 public class Calculator
 {
     //Method for calculations
-    public static double Calculate(int lValue, int rValue, string symbol)
+    public static double Calculate(double lValue, double rValue, string symbol)
     {
         double response = 0;
 
@@ -29,7 +29,7 @@ public class Calculator
                 break;
         }
 
-        return response;
+        return Math.Round(response, 1);
     }
 }
 

@@ -1,11 +1,12 @@
 ﻿using System;
-namespace CalculatorTests
+using CalculatorLibrary;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace CalculatorTests;
+
+[TestClass]
+public class MultiplicationUnitTest
 {
-    public class MultiplicationUnitTest
-    {
-        public MultiplicationUnitTest()
-        {
-        }
-    }
+    
 }
 

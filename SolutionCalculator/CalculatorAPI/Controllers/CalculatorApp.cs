@@ -5,19 +5,19 @@ namespace CalculatorAPI.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class CalculatorProject : ControllerBase
 {
 
-    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly ILogger<CalculatorProject> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public CalculatorProject(ILogger<CalculatorProject> logger)
     {
         _logger = logger;
     }
 
     [HttpGet]
     [Route("/add/{paramOne}/{paramTwo}")]
-    public double Addition(int paramOne, int paramTwo)
+    public double Addition(double paramOne, double paramTwo)
     {
         return Calculator.Calculate(paramOne, paramTwo, "+");
 

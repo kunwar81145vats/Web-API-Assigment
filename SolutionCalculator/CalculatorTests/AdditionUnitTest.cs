@@ -11,7 +11,7 @@ public class AdditionUnitTest
     [DataRow(1, 1, 2)]
     [DataRow(2, 2, 4)]
     [DataRow(2, 7, 9)]
-    public void AdditionWithPositiveInts(int left, int right, double expected)
+    public void AdditionWithPositiveInts(double left, double right, double expected)
     {
         double result;
         result = Calculator.Calculate(left, right, "+");
@@ -22,7 +22,7 @@ public class AdditionUnitTest
     [DataRow(1, -1, 0)]
     [DataRow(4, -2, 2)]
     [DataRow(0, -2, -2)]
-    public void AdditionWithOneNegative(int left, int right, double expected)
+    public void AdditionWithOneNegative(double left, double right, double expected)
     {
         double result;
         result = Calculator.Calculate(left, right, "+");
@@ -33,7 +33,7 @@ public class AdditionUnitTest
     [DataRow(0, -1, -1)]
     [DataRow(0, -2, -2)]
     [DataRow(0, -5, -5)]
-    public void AdditionWithOneNegativeAndZero(int left, int right, double expected)
+    public void AdditionWithOneNegativeAndZero(double left, double right, double expected)
     {
         double result;
         result = Calculator.Calculate(left, right, "+");
@@ -44,7 +44,7 @@ public class AdditionUnitTest
     [DataRow(0, 1, 1)]
     [DataRow(0, 2, 2)]
     [DataRow(0, 5, 5)]
-    public void AdditionWithZero(int left, int right, double expected)
+    public void AdditionWithZero(double left, double right, double expected)
     {
         double result;
         result = Calculator.Calculate(left, right, "+");
@@ -55,7 +55,7 @@ public class AdditionUnitTest
     [DataRow(-2, -1, -3)]
     [DataRow(-1, -5, -6)]
     [DataRow(-4, -5, -9)]
-    public void AdditioWithNegativeInts(int left, int right, double expected)
+    public void AdditionWithNegativeInts(double left, double right, double expected)
     {
         double result;
         result = Calculator.Calculate(left, right, "+");
@@ -110,7 +110,7 @@ public class AdditionUnitTest
     [DataRow(-2.1, -1.2, -3.3)]
     [DataRow(-1.6, -5.1, -6.7)]
     [DataRow(-4.2, -5.4, -9.6)]
-    public void AdditioWithNegativeDouble(double left, double right, double expected)
+    public void AdditionWithNegativeDouble(double left, double right, double expected)
     {
         double result;
         result = Calculator.Calculate(left, right, "+");
