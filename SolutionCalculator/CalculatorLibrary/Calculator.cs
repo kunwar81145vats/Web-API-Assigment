@@ -20,7 +20,14 @@ public class Calculator
 
             //Division
             case "/":
-                response = lValue / rValue;
+                if(rValue == 0)
+                {
+                    throw new DivideByZeroException("Divide by 0 not possible");
+                }
+                else
+                {
+                    response = lValue / rValue;
+                }
                 break;
 
             //Multiplication

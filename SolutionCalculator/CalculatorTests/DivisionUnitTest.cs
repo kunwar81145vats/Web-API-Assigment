@@ -116,5 +116,12 @@ public class DivisionUnitTest
         result = Calculator.Calculate(left, right, "/");
         Assert.AreEqual(expected, result);
     }
+
+
+    [DataTestMethod]
+    public void DivideDoubleWithZero()
+    {
+        Assert.ThrowsException<DivideByZeroException>(() => { Calculator.Calculate(8.5, 0, "/"); });
+    }
 }
 
