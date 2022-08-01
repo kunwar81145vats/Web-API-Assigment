@@ -36,6 +36,7 @@ public class CalculatorProject : ControllerBase
     [Route("/multiply/{paramOne}/{paramTwo}")]
     public double Multiplication(int paramOne, int paramTwo)
     {
+        //multiplication method
         return Calculator.Calculate(paramOne, paramTwo, "*");
 
     }
