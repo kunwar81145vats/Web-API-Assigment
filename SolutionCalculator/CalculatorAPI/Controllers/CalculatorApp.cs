@@ -27,6 +27,7 @@ public class CalculatorProject : ControllerBase
     [Route("/subtract/{paramOne}/{paramTwo}")]
     public double Subtraction(int paramOne, int paramTwo)
     {
+        //subtract method
         return Calculator.Calculate(paramOne, paramTwo, "-");
 
     }
